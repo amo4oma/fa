@@ -1,0 +1,401 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+$color1 : #575442;
+$color2 : #9b8a5d;
+
+// font-family: 'Cairo', sans-serif;
+// font-family: 'Inter', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Poppins', sans-serif;
+@font-face {
+    font-family: "Fanii";
+    src: url(../Assests/Fanni.ttf)format("truetype");
+}
+
+$font-main: "Fanni";
+.pc-nav{
+display: flex;
+flex-direction: row;
+position: fixed;
+z-index: 99999;
+padding-left: 50px;
+padding-top: 20px;
+padding-bottom: 10px;
+background-color: #ffffff;
+width: 100%;
+-webkit-box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
+-moz-box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
+box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
+@media screen and (max-width: 750px) {
+    display: none;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .nav-item{
+        margin-left: 150px;
+        .nav-link{
+            cursor: pointer;
+        }
+    }
+}
+    .logo{
+    width: 150px;
+    margin-right: 6rem;
+}
+}
+.navbar {
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    
+    -webkit-box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
+    .nav-item{
+        color: #000;
+           .nav-link {
+        color: #000;
+    }
+    }
+ 
+
+
+    .navbar-brand {
+        img {
+            width: 180px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+    }
+}
+
+#mobile{
+ display: none;
+
+ @media screen and (max-width : 750px) {
+    display: block;
+ }
+}
+
+.banner {
+    padding-top: 0px;
+    .mySwiper{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .swiper-wrapper{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .swiper-slide{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 100%;
+                    height: 100%;
+
+                }
+                .slide-1-text{
+                    position: absolute;
+                    color: #030845;
+                    width: 50%;
+                }
+            }
+            
+            .swiper-slide-active .slide-1-text {
+                animation: rollIn 1s;
+            }
+        }
+    }
+
+    .mouse {
+        width: 30px;
+        height: 60px;
+        border: 3px solid #333;
+        border-radius: 60px;
+        position: relative;
+        left: 45%;
+        bottom: -30px;
+
+        &::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            border-radius: 50%;
+            opacity: 1;
+            animation: wheel 2s infinite;
+            -webkit-animation: wheel 2s infinite;
+        }
+    }
+
+    @keyframes wheel {
+        to {
+            opacity: 0;
+            top: 60px;
+        }
+    }
+
+    @-webkit-keyframes wheel {
+        to {
+            opacity: 0;
+            top: 60px;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        .pin-spacer {
+            height: 100%;
+        }
+    }
+
+    //     .carousel-inner{
+    //         height: 90vh;
+    //         #slide-one{
+    //             background-image: url(.././Assests/291941.webp);
+    //             background-size: cover;
+    //             background-position: 100%;
+    //             h1{
+    //                 color: $color2;
+    //             }
+    //         }
+    //     }
+    // .carousel{
+    //       .slid-image{
+    //         width: 100%;
+    //         object-fit: contain;
+    //     }
+    // }
+    .animated-banner-row {
+        .text-col {
+            height: 80vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Oswald';
+            color: #575442;
+            text-align: center;
+
+            .wlecom {
+                p {
+                    color: #030845;
+                    font-size: 30px;
+                }
+
+                .box {
+                    width: 80%;
+                    height: 100px;
+                    border: solid 5px rgb(251, 147, 0);
+                    border-color: rgb(1, 0, 37) transparent transparent transparent;
+                    border-radius: 70%/100px 100px 0 0;
+                }
+            }
+
+        }
+    }
+
+    .animated-logo-div {
+
+        position: relative;
+        top: 100px;
+        transition: all 100ms;
+
+        img {
+            position: absolute;
+            width: 40%;
+            left: 0px;
+            top: 0px;
+
+        }
+
+ 
+
+    }
+
+    .animated-logo-div-left {
+        position: relative;
+        top: 100px;
+        transition: all 100ms;
+
+
+        img {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 50%;
+
+        }
+    }
+    @media screen and (max-width:500px) {
+        .right-logo, .left-logo {
+            width: 100% !important;
+        }
+    }
+    .second-message{
+        display: none;
+    }
+    .third-message{
+        display: none;
+        width: 55%;
+    }
+}
+.mission-container{
+    margin-top: 50px;
+    color: #4D9DC9;
+    h1{
+        font-weight: 800;
+    }
+    p{
+        color: #030845;
+    }
+    img{
+        margin-left: 50px;
+        width: 80%;
+    }
+    .vision{
+        margin-top: 150px;
+        h1{
+            text-align: right;
+        }
+        p{
+            text-align: right;
+            color: #030845;
+        }
+    }
+}
+#services {
+    background-color: #2F8AB7;
+    padding-top: 100px;
+    margin-top: 150px;
+    padding-bottom: 150px;
+    color: #fff;
+    .bi{
+        font-size: 150px;
+    }
+    .title {
+        font-family: 'Cairo', sans-serif;
+        margin-bottom: 90px;
+        font-weight: 700;
+    }
+    .icons-title{
+        font-family:'Oswald', sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        line-height: 1;
+        margin-top: 1em;
+        font-weight: 600;
+    }
+}
+#about-us{
+    h1{
+        font-family:'Oswald', sans-serif;
+        color: #4D9DC9;
+        font-size: 90px;
+        line-height: 1;
+        margin-top: 1em;
+        font-weight: 600;
+    }
+    .divider{
+        height: 430px;
+        width: 2px;
+        background-color: #4D9DC9;
+        margin-left: 100px;
+    }
+    .about-disc{
+        color: #030845;
+        font-size: 20px;
+        margin-top: 2em;
+        text-align: justify;
+    }
+}
+#sublies{
+    margin-top: 0px;
+    img{
+        width: 200px;
+    }
+    .row>*{
+        padding-right: 0px;
+    }
+    .supplay-img{
+        width: 100%;
+        height: 100%;
+    }
+    .title{
+        font-family:'Oswald', sans-serif;
+        color: #4D9DC9;
+        font-size: 70px;
+        line-height: 1;
+        margin-top: -1em;
+        font-weight: 600;
+        margin-bottom: 1em;
+    }
+    p{
+        color: #030845;
+        font-family:'Oswald', sans-serif;
+        font-size: 30px;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+}
+#parallax {
+    height: 100vh;
+    
+    position: relative;
+    .clients-logos{
+        margin-top: 50px;
+        text-align: center;
+        .row>*{
+            margin-bottom: -100px;
+        }
+        h1{
+            font-family:'Oswald', sans-serif;
+            color: #4D9DC9;
+            font-size: 70px;
+            line-height: 1;
+            margin-top: 1em;
+            font-weight: 600;
+     
+        }
+        p{
+            font-family: 'Oswald', sans-serif;
+            color: #030845;
+            margin-top: -80px;
+        }
+        img{
+            width: 200px;
+            height: 300px;
+            object-fit: contain;
+        }
+    }
+}
+footer{
+    height: 40vh;
+    background-color: #030845;
+    width: 100%;
+    color: #fff;
+    .copyrihgt{
+        color: rgb(172, 172, 172);
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+    }
+}
