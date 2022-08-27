@@ -24,13 +24,14 @@ flex-direction: row;
 position: fixed;
 z-index: 99999;
 padding-left: 50px;
-padding-top: 20px;
+padding-top: 10px;
 padding-bottom: 10px;
 background-color: #ffffff;
 width: 100%;
 -webkit-box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
 -moz-box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
 box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
+transition: all ease 500ms;
 @media screen and (max-width: 750px) {
     display: none;
 }
@@ -41,14 +42,33 @@ box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
     align-items: center;
     .nav-item{
         margin-left: 150px;
+        position: relative;
+       
+        &:hover{
+            .line{
+                width: 100%;
+            }
+        }
+        span{
+            width: 0%;
+            height: 2.5px;
+            background-color: #030845;
+            position: absolute;
+            transition: all ease 500ms;
+        }
         .nav-link{
             cursor: pointer;
+            font-family: 'Oswald';
+            font-size: 20px;
+            transition: all ease 500ms;
+        
         }
     }
 }
     .logo{
     width: 150px;
     margin-right: 6rem;
+    transition: all ease 500ms;
 }
 }
 .navbar {
@@ -390,24 +410,11 @@ box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
 
 
 #projects{
-    text-align: center;
-    padding-bottom: 250px;
-    background-image: url('../Assests/1595337618blue-dots.png');
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: 0% 100%;
+ 
     position: relative;
-   &::before {
-    content: "";
+ #canvas{
     position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(147, 185, 255, 0.1);
-    z-index: 1;
-}
-    background-attachment: fixed;
+ }
     .project-title{
         font-family:'Oswald', sans-serif;
         color: #4D9DC9;
@@ -439,7 +446,25 @@ box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
             border-radius: 25px;
             position: relative;
         }
+        .project-text-container{
+            height: 150px;
+            font-family: 'Oswald';
+            h3{
+                font-size: 20px ;
+                color: #030845;
+                padding-top: 3px;
+            }
+            p{
+                font-size:17px;
+                padding: 5px 3px;
+            }
+        }
 
+    }
+    .project-buton{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 150px;
     }
     .see-more-projects{
         padding: 10px 20px;
@@ -473,5 +498,31 @@ footer{
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
         font-size: 17px;
+    }
+}
+
+
+#about-us-page{
+    height: 100vh;
+    background-color: #2F8AB7;
+    .contact-header{
+        margin-top: 0;
+        padding-top: 130px;
+        font-family: 'Oswald';
+        color: #fff;
+        opacity: 0.5;
+        font-size: 40px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        
+     
+    }
+    .form{
+        position: relative;
+       
+        left: 20px;
+        width: 50%;
+        margin: 0 auto;
     }
 }

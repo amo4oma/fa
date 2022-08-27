@@ -21,12 +21,14 @@
   position: fixed;
   z-index: 99999;
   padding-left: 50px;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 10px;
   background-color: #ffffff;
   width: 100%;
   -webkit-box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 4px 30px -6px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
 }
 
 @media screen and (max-width: 750px) {
@@ -53,15 +55,35 @@
 
 .pc-nav .navbar-nav .nav-item {
   margin-left: 150px;
+  position: relative;
+}
+
+.pc-nav .navbar-nav .nav-item:hover .line {
+  width: 100%;
+}
+
+.pc-nav .navbar-nav .nav-item span {
+  width: 0%;
+  height: 2.5px;
+  background-color: #030845;
+  position: absolute;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
 }
 
 .pc-nav .navbar-nav .nav-item .nav-link {
   cursor: pointer;
+  font-family: 'Oswald';
+  font-size: 20px;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
 }
 
 .pc-nav .logo {
   width: 150px;
   margin-right: 6rem;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
 }
 
 .navbar {
@@ -416,27 +438,13 @@
 }
 
 #projects {
-  text-align: center;
-  padding-bottom: 250px;
-  background-image: url("../Assests/1595337618blue-dots.png");
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: 0% 100%;
   position: relative;
-  background-attachment: fixed;
   width: 100%;
   overflow: hidden;
 }
 
-#projects::before {
-  content: "";
+#projects #canvas {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(147, 185, 255, 0.1);
-  z-index: 1;
 }
 
 #projects .project-title {
@@ -474,6 +482,28 @@
      object-fit: cover;
   border-radius: 25px;
   position: relative;
+}
+
+#projects .project-card .project-text-container {
+  height: 150px;
+  font-family: 'Oswald';
+}
+
+#projects .project-card .project-text-container h3 {
+  font-size: 20px;
+  color: #030845;
+  padding-top: 3px;
+}
+
+#projects .project-card .project-text-container p {
+  font-size: 17px;
+  padding: 5px 3px;
+}
+
+#projects .project-buton {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 150px;
 }
 
 #projects .see-more-projects {
@@ -514,5 +544,29 @@ footer .copyrihgt {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 17px;
+}
+
+#about-us-page {
+  height: 100vh;
+  background-color: #2F8AB7;
+}
+
+#about-us-page .contact-header {
+  margin-top: 0;
+  padding-top: 130px;
+  font-family: 'Oswald';
+  color: #fff;
+  opacity: 0.5;
+  font-size: 40px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about-us-page .form {
+  position: relative;
+  left: 20px;
+  width: 50%;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
