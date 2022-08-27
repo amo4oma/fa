@@ -415,6 +415,93 @@
      object-fit: contain;
 }
 
+#projects {
+  text-align: center;
+  padding-bottom: 250px;
+  background-image: url("../Assests/1595337618blue-dots.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 0% 100%;
+  position: relative;
+  background-attachment: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
+#projects::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(147, 185, 255, 0.1);
+  z-index: 1;
+}
+
+#projects .project-title {
+  font-family: 'Oswald', sans-serif;
+  color: #4D9DC9;
+  font-size: 70px;
+  line-height: 1;
+  margin: 1em 0px;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+#projects .project-card {
+  width: 95%;
+  border: #2F8AB7 1px solid;
+  border-radius: 25px;
+  position: relative;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+#projects .project-card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#projects .project-card img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+  position: relative;
+}
+
+#projects .see-more-projects {
+  padding: 10px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #030845;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 15px;
+  font-size: 25px;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+  margin: 0 auto;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+
+#projects .see-more-projects:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  background-color: #fff;
+  color: #2F8AB7;
+  border: #2F8AB7 1px solid;
+}
+
 footer {
   height: 40vh;
   background-color: #030845;
